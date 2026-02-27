@@ -1,7 +1,7 @@
 export default function Guitar({guitar, addToCart}) {
 
     //Un poco mas limpio que guitar. para mostrar los datos
-    const {id, name, image, description, price} = guitar
+    const {name, image, description, price} = guitar
     
 
 

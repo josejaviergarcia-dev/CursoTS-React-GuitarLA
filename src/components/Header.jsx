@@ -1,11 +1,8 @@
-import { useMemo } from "react"
+import { useCart } from "../hooks/useCart"
 
-export default function Header({cart,clearCart, removeFromCart, increaseQuantity, decreaseQuantity}) {
+export default function Header({cart,clearCart, removeFromCart, increaseQuantity, 
+    decreaseQuantity, isEmpty, cartTotal}) {
 
-    //state derivado
-    const isEmpty = useMemo( () => cart.length === 0, [cart])
-    const cartTotal = useMemo(() => cart.reduce((total, i) =>
-                        total + (i.quantity * i.price), 0), [cart])
 
     return (
 
@@ -41,8 +38,8 @@ export default function Header({cart,clearCart, removeFromCart, increaseQuantity
                                     </thead>
                                     <tbody>
                                         {cart.map(guitar=>(
-                                        <tr>
-                                            <td key={guitar.id}>
+                                        <tr key={guitar.id}>
+                                            <td >
                                                 <img 
                                                 className="img-fluid" 
                                                 src={`/img/${guitar.image}.jpg`} 

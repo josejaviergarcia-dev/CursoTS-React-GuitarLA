@@ -255,6 +255,7 @@ button {
 button,
 [type=button] {
   -webkit-appearance: button;
+  appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled) {
@@ -299,6 +300,7 @@ button:not(:disabled),
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
+  appearance: button;
 }
 
 .display-2 {
@@ -599,11 +601,11 @@ button:not(:disabled),
 }
 
 .align-is-start {
-  align-is: flex-start !important;
+  align-items: flex-start !important;
 }
 
 .align-is-center {
-  align-is: center !important;
+  align-items: center !important;
 }
 
 .my-4 {
